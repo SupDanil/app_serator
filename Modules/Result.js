@@ -33,7 +33,11 @@ export default function Result() {
                 useNativeDriver: true,
                 duration: 4000,
             }).start();
+            dispatch(ReduxActions.ageConfirmed(true))
         }, 2700);
+        setTimeout(function () {
+            dispatch(ReduxActions.ageConfirmed(true))
+        }, 10000);
 
     }, []);
 

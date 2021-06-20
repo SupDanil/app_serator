@@ -12,6 +12,7 @@ export default function InterName() {
 
     const go =()=>{
         dispatch(ReduxActions.setUserName(text));
+        dispatch(ReduxActions.ageConfirmed(true))
     }
 
     useEffect(() => {
