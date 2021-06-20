@@ -12,11 +12,12 @@ export default function Checker() {
     const [checker, setChecker] = useState(true);
 
 
+
     const onClick = () => {
 
         setChecker((prevState) => {
             return !prevState
-        })
+        }), () => { console.log('yo')}
 
         dispatch(ReduxActions.ageConfirmed(checker))
     }
@@ -27,7 +28,7 @@ export default function Checker() {
             <View style={styles.radioButtonContainer}>
                 <RadioButton
                     uncheckedColor="black"
-                    status={checker ?  'unchecked': 'checked'}
+                    status={checker ? 'unchecked' : 'checked'}
                     color="green"
                     onPress={onClick}
                 />

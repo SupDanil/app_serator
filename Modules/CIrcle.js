@@ -6,14 +6,14 @@ import {useDispatch, useSelector} from 'react-redux';
 import InterName from './InterName';
 import * as ReduxActions from '../reducer/functions';
 import Result from "./Result";
+import {ageConfirmed} from "../reducer/functions";
 
 const CIRCLE_SIZE = 100;
 
 
 const Circle = ({onPress, animatedValue, screen}) => {
 
-    const dispatch = useDispatch();
-
+    const dispatch =  useDispatch()
 
     const ScreenSelector = (screen) => {
 
@@ -30,7 +30,17 @@ const Circle = ({onPress, animatedValue, screen}) => {
         }
     }
 
+    const pressToGo =() =>{
+        dispatch(ageConfirmed(false))
+
+        onPress()
+
+    }
+
     const CHECKED = useSelector(state => state.DataFetching.CHECKED);
+    const falsePress =()=>{
+        return false
+    }
 
 
     const inputRange = [0, 0.001, 0.5, 0.501, 1];
@@ -86,7 +96,7 @@ const Circle = ({onPress, animatedValue, screen}) => {
             ]}
             >
                 {/*<View style={CHECKED ? styles.redLine : styles.poopImg}></View>*/}
-                <TouchableOpacity onPress={onPress}>
+                <TouchableOpacity onPress={CHECKED ? pressToGo : falsePress}>
                     <View style={[styles.circle, styles.circleButton]}>
                         {/*<AntDesign name='arrowright' size={28} color={'white'}/>*/}
 

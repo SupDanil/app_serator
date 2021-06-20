@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
 const initialState ={
-    CHECKED: false,
+    CHECKED: true,
     NAME: false
 
 }

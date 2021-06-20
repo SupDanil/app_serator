@@ -32,7 +32,8 @@ export default function App() {
     const onPress = () => {
         setScreen(prevState => {
             if (screen == 3){
-                setScreen(0)
+                setScreen(0);
+
             }else{
                 return prevState + 1
 
