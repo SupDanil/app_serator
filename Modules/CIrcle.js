@@ -100,7 +100,7 @@ const Circle = ({onPress, animatedValue, screen}) => {
                     <View style={[styles.circle, styles.circleButton]}>
                         {/*<AntDesign name='arrowright' size={28} color={'white'}/>*/}
 
-                        {CHECKED && screen == 1? <Text style={styles.poop}>💩</Text> : false}
+                        {CHECKED ? <Text style={styles.poop}>💩</Text> : false}
                         {/*<Image*/}
                         {/*    style={styles.gifShit}*/}
                         {/*    source={require('./assets/ezgif.com-gif-maker.gif')}*/}
