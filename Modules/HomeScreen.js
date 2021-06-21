@@ -23,7 +23,7 @@ export default function HomeScreen() {
                     />
                 </View>
             )
-        }, 2000);
+        }, 1700);
     }, []);
 
     return (
